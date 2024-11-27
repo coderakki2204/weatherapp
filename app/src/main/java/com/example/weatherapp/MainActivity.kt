@@ -3,6 +3,7 @@ package com.example.weatherapp
 import android.app.DownloadManager.Query
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
@@ -119,7 +120,7 @@ class MainActivity : AppCompatActivity() {
          }
 
          override fun onFailure(p0: Call<weatherapi>, p1: Throwable) {
-             TODO("Not yet implemented")
+             Toast.makeText(this@MainActivity,"Error",Toast.LENGTH_SHORT).show()
          }
 
      })
